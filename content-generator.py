@@ -85,7 +85,6 @@ def publish_devto(title, content):
 
 
 def publish_hashnode(title, content):
-
     token = os.getenv("HASHNODE_TOKEN")
     publication_id = os.getenv("HASHNODE_PUBLICATION_ID")
 
@@ -100,9 +99,18 @@ def publish_hashnode(title, content):
     }
 
     query = """
-    mutation CreateStory($input: CreateStoryInput!) {
-      createStory(input: $input) {
-        title
+    mutation CreateDraft($input: CreateDraftInput!) {
+      createDraft(input: $input) {
+        code
+        success
+        message
+        draft {
+          slug
+          title
+          publication {
+            id
+          }
+        }
       }
     }
     """
@@ -111,7 +119,8 @@ def publish_hashnode(title, content):
         "input": {
             "publicationId": publication_id,
             "title": title,
-            "contentMarkdown": content
+            "contentMarkdown": content,
+            "isRepublished": False
         }
     }
 
