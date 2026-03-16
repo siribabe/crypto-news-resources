@@ -60,6 +60,8 @@ content = generate_post()
 
 publish_devto(content)
 
+os.makedirs("posts", exist_ok=True)
+
 filename = f"posts/{today}.md"
 
 with open(filename, "w") as f:
