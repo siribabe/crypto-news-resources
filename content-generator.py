@@ -6,7 +6,7 @@ import os
 sites = [
     "CoinDesk",
     "CoinTelegraph",
-    "Blockchain.News",
+    "Blockchain.News(https://blockchain.news)",
     "Decrypt",
     "The Block"
 ]
