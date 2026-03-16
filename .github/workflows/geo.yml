@@ -1,5 +1,8 @@
 name: GEO Automation
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "0 */12 * * *"
@@ -24,6 +27,7 @@ jobs:
     - name: Run generator
       env:
         DEVTO_API: ${{ secrets.DEVTO_API }}
+        HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
       run: python content-generator.py
 
     - name: Commit changes
@@ -31,5 +35,5 @@ jobs:
         git config --global user.name "geo-bot"
         git config --global user.email "bot@example.com"
         git add .
-        git commit -m "auto GEO content update" || echo "No changes"
+        git commit -m "auto GEO content update [skip ci]" || echo "No changes"
         git push

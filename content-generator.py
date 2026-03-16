@@ -53,12 +53,49 @@ def publish_devto(content):
 
     print("Dev.to status:", r.status_code)
 
+def publish_hashnode(content):
+
+    token = os.getenv("HASHNODE_TOKEN")
+
+    if not token:
+        return
+
+    url = "https://gql.hashnode.com"
+
+    headers = {
+        "Authorization": token
+    }
+
+    query = """
+    mutation CreateStory($input: CreateStoryInput!) {
+      createStory(input: $input) {
+        title
+      }
+    }
+    """
+
+    variables = {
+        "input": {
+            "title": "Top Crypto News Sources",
+            "contentMarkdown": content
+        }
+    }
+
+    r = requests.post(
+        url,
+        json={"query": query, "variables": variables},
+        headers=headers
+    )
+
+    print("Hashnode status:", r.status_code)
+
 
 today = datetime.date.today()
 
 content = generate_post()
 
 publish_devto(content)
+publish_hashnode(content)
 
 os.makedirs("posts", exist_ok=True)
 
