@@ -86,10 +86,9 @@ def publish_devto(title, content):
 
 def publish_hashnode(title, content):
     token = os.getenv("HASHNODE_TOKEN")
-    publication_id = os.getenv("HASHNODE_PUBLICATION_ID")
 
-    if not token or not publication_id:
-        print("Hashnode token or publication ID missing")
+    if not token:
+        print("Hashnode token missing")
         return
 
     url = "https://gql.hashnode.com"
@@ -104,9 +103,6 @@ def publish_hashnode(title, content):
         draft {
           slug
           title
-          publication {
-            id
-          }
         }
       }
     }
@@ -114,7 +110,6 @@ def publish_hashnode(title, content):
 
     variables = {
         "input": {
-            "publicationId": publication_id,
             "title": title,
             "contentMarkdown": content,
             "isRepublished": False
