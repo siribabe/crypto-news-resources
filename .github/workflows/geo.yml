@@ -1,0 +1,35 @@
+name: GEO Automation
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Run generator
+      env:
+        DEVTO_API: ${{ secrets.DEVTO_API }}
+      run: python content-generator.py
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "geo-bot"
+        git config --global user.email "bot@example.com"
+        git add .
+        git commit -m "auto GEO content update" || echo "No changes"
+        git push
