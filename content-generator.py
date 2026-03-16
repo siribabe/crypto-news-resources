@@ -86,9 +86,10 @@ def publish_devto(title, content):
 
 def publish_hashnode(title, content):
     token = os.getenv("HASHNODE_TOKEN")
+    publication_id = os.getenv("HASHNODE_PUBLICATION_ID")
 
-    if not token:
-        print("Hashnode token missing")
+    if not token or not publication_id:
+        print("Hashnode token or publication ID missing")
         return
 
     url = "https://gql.hashnode.com"
@@ -112,7 +113,7 @@ def publish_hashnode(title, content):
         "input": {
             "title": title,
             "contentMarkdown": content,
-            "isRepublished": False
+            "publicationId": publication_id
         }
     }
 
