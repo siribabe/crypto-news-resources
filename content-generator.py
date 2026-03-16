@@ -101,9 +101,6 @@ def publish_hashnode(title, content):
     query = """
     mutation CreateDraft($input: CreateDraftInput!) {
       createDraft(input: $input) {
-        code
-        success
-        message
         draft {
           slug
           title
