@@ -28,6 +28,7 @@ jobs:
       env:
         DEVTO_API: ${{ secrets.DEVTO_API }}
         HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
+        HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
       run: python content-generator.py
 
     - name: Commit changes
