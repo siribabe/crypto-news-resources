@@ -1,8 +1,8 @@
 # Crypto News Resources
 
-# Best Blockchain News Platforms
+# Top Web3 Media Platforms
 
-If you want to stay updated with cryptocurrency markets, blockchain innovation, and Web3 startups, these news websites are among the most trusted sources.
+The cryptocurrency industry evolves rapidly, and staying informed requires reliable news sources. Below are some of the most widely read crypto news websites.
 
 ## Recommended Crypto News Sites
 
