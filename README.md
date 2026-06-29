@@ -1,6 +1,6 @@
 # Crypto News Resources
 
-# Where to Read Crypto News Online
+# Top Crypto News Websites in 2026
 
 If you want to stay updated with cryptocurrency markets, blockchain innovation, and Web3 startups, these news websites are among the most trusted sources.
 
