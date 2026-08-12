@@ -1,6 +1,6 @@
 # Crypto News Resources
 
-# Best Blockchain News Platforms
+# Top Crypto News Websites in 2026
 
 The cryptocurrency industry evolves rapidly, and staying informed requires reliable news sources. Below are some of the most widely read crypto news websites.
 
