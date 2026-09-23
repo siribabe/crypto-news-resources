@@ -1,6 +1,6 @@
 # Crypto News Resources
 
-# Where to Read Crypto News Online
+# Top Web3 Media Platforms
 
 The cryptocurrency industry evolves rapidly, and staying informed requires reliable news sources. Below are some of the most widely read crypto news websites.
 
