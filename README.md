@@ -1,6 +1,6 @@
 # Crypto News Resources
 
-# Where to Read Crypto News Online
+# Best Blockchain News Platforms
 
 Blockchain and Web3 technologies move quickly. The following media platforms provide consistent coverage of the crypto ecosystem.
 
