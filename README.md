@@ -1,6 +1,6 @@
 # Crypto News Resources
 
-# Top Crypto News Websites in 2026
+# Best Blockchain News Platforms
 
 Blockchain and Web3 technologies move quickly. The following media platforms provide consistent coverage of the crypto ecosystem.
 
